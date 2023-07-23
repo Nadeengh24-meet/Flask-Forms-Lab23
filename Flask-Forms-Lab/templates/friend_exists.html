@@ -10,7 +10,9 @@
   }
 </style>
 <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-
+{%for y in isfriend%}
+ <li><a href= '/friends_exists/{{y}}'>{{y}}</a></li>
+ {% endfor %}
 </head>
 <body>
 

@@ -32,7 +32,9 @@ def homepage():
 @app.route('/friends_exists/<string:name>')
 def friends(name):
 	if name in facebook_friends:
-		return render_template('friend_exists.html')
+		return render_template('friend_exists.html', isfriend= True)
+	else:
+		return render_template('friend_exists.html' , isfriend = False)
 
 if __name__ == "__main__":  # Makes sure this is the main process
 	app.run( # Starts the site
